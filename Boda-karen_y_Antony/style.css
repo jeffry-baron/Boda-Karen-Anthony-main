@@ -1,0 +1,328 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+  --morado: #755d3f;
+  --blanco: #f5f4f4;
+  --dorado: #b49e2d;
+}
+
+/*morado color 8B39B8*/
+
+.cuadro {
+  width: 100%;
+  height: 500px;
+}
+
+.fondo-marmol {
+  background-image: url('assets/images/shutterstock_2567399061.jpg');
+  background-size: contain;
+  background-position: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row>* {
+  padding: 0;
+}
+/*INICIO FUENTE*/
+
+h1 {
+  font-family: "Fleur De Leah", serif;
+  font-size: 5rem;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Charm", serif;
+  text-align: center;
+  font-size: 4rem;
+}
+
+h3 {
+  text-align: center;
+  font-family: "Domine", serif;
+  font-size: 2rem;
+}
+
+p {
+  text-align: center;
+  font-family: "Oranienbaum", serif;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.morado {
+  color: var(--morado);
+}
+
+.dorado {
+  color: var(--dorado);
+}
+
+.galeria {
+  width: 100% !important;
+  border-radius: 15px;
+}
+
+.galeria2 {
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
+}
+
+/*FIN FUENTE*/
+
+/*REPRODUCTOR DE MÚSICA*/
+
+.reproductor-musica {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: var(--blanco);
+  border-radius: 20px;
+  width: 500px;
+}
+
+#progreso {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  background: rgba(165, 165, 165, 0.4);
+  margin: 14px 0 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#progreso::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--morado);
+  width: 16px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px var(--morado);
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+}
+
+.controles button {
+  width: 50px;
+  aspect-ratio: 1/1;
+  margin: 5px;
+  background: rgba(165, 165, 165, 0.3);
+  color: var(--morado);
+  border-radius: 50%;
+  border: 0px solid var(--morado);
+  outline: 0;
+  font-size: 1.5rem;
+  box-shadow: 0 6px 10px rgba(165, 165, 165, 0.3);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.controles .control:hover {
+  transform: scale(1.2);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-family: "Oranienbaum", serif;
+  font-size: 3rem;
+  color: #000;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 70px;
+  width: 75%;
+  padding: 8px 15px;
+  box-shadow: 0 6px 10px rgba(165, 165, 165, 0.3);
+
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time span {
+  display: block;
+}
+
+.separator {
+  margin: 0 10px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #333;
+}
+
+.lineal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  margin-top: 30px !important;
+  border-radius: 15px;
+  width: 300px !important;
+  padding: 5px 15px;
+  font-family: "Oranienbaum", serif;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+  color: var(--blanco);
+  background-color: var(--morado);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.Galeria img {
+  width: 100% !important;
+  border-radius: 15px;
+  padding: 0 5px;
+}
+
+/* ===== PARCHE SEGURO RESPONSIVE ===== */
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container, .container-fluid{
+  overflow-x: hidden;
+}
+
+.reproductor-musica{
+  width: min(500px, 92vw);
+}
+
+.countdown{
+  width: min(75%, 560px);
+  flex-wrap: wrap;
+}
+
+.slider-for, .slider-nav{
+  width: 100%;
+}
+
+.slick-slide img{
+  width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 992px){
+  .countdown{
+    width: min(92vw, 560px);
+  }
+
+  p{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  a{
+    width: min(92vw, 300px) !important;
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  h1{ font-size: 3.2rem; }
+  h2{ font-size: 2.5rem; }
+  h3{ font-size: 1.6rem; }
+
+  p{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  .countdown{
+    padding: 10px 12px;
+    border-radius: 24px;
+  }
+
+  .label{
+    font-size: .75rem;
+  }
+
+  .galeria2{
+    height: 75px;
+    width: 75px;
+  }
+}
+
+/* Mobile pequeño */
+@media (max-width: 576px){
+  .reproductor-musica{
+    padding: 10px 14px;
+  }
+
+  a{
+    display: block;
+    margin: 10px auto !important;
+  }
+
+  .col-5{
+    width: 100%;
+  }
+}
+
+/*
+@media only screen and (max-width: 480px) {
+
+  h1 {
+    font-family: "Fleur De Leah", serif;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "Charm", serif;
+    text-align: center;
+    font-size: 2.9rem;
+  }
+
+  h3 {
+    text-align: center;
+    font-family: "Domine", serif;
+    font-size: 2rem;
+  }
+
+  p {
+    text-align: center;
+    font-family: "Oranienbaum", serif;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+  }
+
+  .galeria2{
+    padding: 10px 0;
+  }
+
+}
+  */
+
